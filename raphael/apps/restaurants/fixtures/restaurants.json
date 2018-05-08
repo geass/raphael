@@ -1,0 +1,35 @@
+[
+  {
+    "fields": {
+      "body": "It's a really test restaurant and here is body!",
+      "description": "It's a really test restaurant!",
+      "owner": 1,
+      "slug": "test-restaurant-1",
+      "title": "Test Restaurant"
+    },
+    "model": "restaurants.restaurants",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "body": "It's a really test-2 restaurant and here is body!",
+      "description": "It's a really test-2 restaurant!",
+      "owner": 1,
+      "slug": "test-restaurant-2",
+      "title": "Test 2 Restaurant"
+    },
+    "model": "restaurants.restaurants",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "body": "It's a really test-3 restaurant and here is body!",
+      "description": "It's a really test-3 restaurant!",
+      "owner": 1,
+      "slug": "test-restaurant-3",
+      "title": "Test 3 Restaurant"
+    },
+    "model": "restaurants.restaurants",
+    "pk": 3
+  }
+]
