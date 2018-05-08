@@ -9,7 +9,7 @@ Raphael is a simple Django backed React-ish Restaurant Listing App was designed 
 
 ##### Prerequisities
 
-- [Follow the Platform Repository Readme Steps](https://github.com/raphael-app)
+- [Follow the Platform Repository Readme Steps](https://github.com/raphael-app/platform.git)
 
 ##### How to use ? 
 
