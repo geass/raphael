@@ -30,13 +30,29 @@ Authorization Grant Type: Resource owner password-based
 Before getting the permission-required datas from Raphael, you need to obtain an acceess-token with your client credentials. And to obtain an Access-token, you need to send below request to raphael;
 
 ```
-curl -X POST -d "grant_type=password&username=<user_name>&password=<password>" -u"<client_id>:<client_secret>" http://localhost:8000/o/token/
+curl -X POST -d "username:password" http://localhost:8000/api-token-auth/
 ````
 
 That will generate an output as below;
 
 ```
-{"access_token": "VEVh9pvn791eeG34uEutlrmZGlODXw", "expires_in": 36000, "token_type": "Bearer", "scope": "read write groups", "refresh_token": "3xrf6H4nDsmPTyPCbWjNiMNRwlwRR8"}
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNlZXJlbmUiLCJleHAiOjE1MjU4NDM2MjAsImVtYWlsIjoiaW5mb0BzZWVyZW5lLmNvbSJ9.7V-F5-yxJ5pCSw0Q2VF18H4gRSj2xbL9l3HMFhiRONI",
+    "user": {
+        "id": 1,
+        "last_login": "2018-05-08T23:05:16.900024Z",
+        "is_superuser": true,
+        "username": "seerene",
+        "first_name": "",
+        "last_name": "",
+        "email": "info@seerene.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2018-05-08T15:05:35.962134Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
 ```
 
 And copy the access-token.
@@ -46,7 +62,7 @@ And copy the access-token.
 Okay, now you are ready to use Raphaels custom APIs freely! with your access-token.
 
 ```
-curl -H "Authorization: Bearer VEVh9pvn791eeG34uEutlrmZGlODXw" http://localhost:8000/restaurants/
+curl -H "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNlZXJlbmUiLCJleHAiOjE1MjU4NDM2MjAsImVtYWlsIjoiaW5mb0BzZWVyZW5lLmNvbSJ9.7V-F5-yxJ5pCSw0Q2VF18H4gRSj2xbL9l3HMFhiRONI" http://localhost:8000/restaurants/
 ```
 
 #### APIs
