@@ -50,6 +50,28 @@ curl -H "Authorization: Bearer VEVh9pvn791eeG34uEutlrmZGlODXw" http://localhost:
 ```
 
 #### APIs
+
+##### Login
+
+`POST /api-token-auth/ {username, password}`
+
+##### Refresh Token
+
+`POST /refreshToken/ {token}`
+
+##### Register
+
+`POST /user/register/ {username, password, email, first_name, last_name}`
+
 ##### Restaurant List
 
-`/restaurants/`
+`GET /restaurants/`
+
+##### Restaurant Detail
+
+`GET /restaurants/{id}`
+`GET /restaurants/1`
+
+##### Edit Restaurant
+
+`PUT /restaurants/1 {id,slug,title,description,body,owner_id}`

@@ -6,7 +6,7 @@ class Restaurants(models.Model):
     title = models.CharField(db_index=True, max_length=255)
     description = models.TextField()
     body = models.TextField()
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner_id = models.PositiveIntegerField()
 
     class Meta:
         db_table = 'restaurants'

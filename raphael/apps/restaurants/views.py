@@ -6,8 +6,7 @@ from .serializers import RestaurantsSerializer
 
 class RestaurantsViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that allows users to be viewed.
     """
-    permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
     queryset = Restaurants.objects.all()
     serializer_class = RestaurantsSerializer
